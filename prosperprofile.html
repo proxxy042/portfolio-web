@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosper | Portfolio</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  </head>
+    <body> 
+                    <!-- Responsive Navigation -->
+   <div class="flex justify-between items-center py-6 px-4 bg-gray-200">
+                    <!-- Logo / Site Name -->
+         <a href="prosperprofile.html" class="text-3xl font-bold text-indigo-600">Prosper</a>
+         <nav class="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+                    <!-- Nav container -->
+    <div id="navContainer" class="relative flex flex-col sm:flex-row">
+                    <!-- Links -->
+      <a href="prosperprofile.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Home</a>
+      <a href="about me.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">About Me</a>
+      <a href="exprience.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Experience</a>
+      <a href="education.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Education</a>
+      <a href="Contact.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Contact</a>
+
+                    <!-- Sliding highlight bar (desktop only) -->
+      <div id="highlight" class="hidden sm:block absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-indigo-600 to-indigo-400 
+      rounded-lg transition-all duration-300 ease-in-out z-0"></div>
+    </div>
+  </nav>
+</div>
+          <!--javascript functions-->
+          <script>
+    const links = document.querySelectorAll(".nav-link");
+    const highlight = document.getElementById("highlight");
+
+     links.forEach((link, index) => {
+    link.addEventListener("mouseenter", () => {
+      if (window.innerWidth >= 640) { // Tailwind 'sm' breakpoint
+        highlight.classList.remove("hidden");
+        highlight.style.left = `${index * 20}%`;
+      }
+    });
+  });
+
+  document.getElementById("navContainer").addEventListener("mouseleave", () => {
+    if (window.innerWidth >= 640) {
+      highlight.classList.add("hidden");
+    }
+  });
+</script> 
+              <!--nav bar end-->
+
+            <!-- Hero Section -->
+  <section class="pt-24 px-4 sm:px-6 lg:px-16 pb-16 max-w-7xl mx-auto flex flex-col-reverse 
+  md:flex-row items-center justify-between gap-10">
+
+    <!-- Text Content -->
+    <div class="w-full md:w-1/2 text-center md:text-left space-y-6">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold">
+        Hi, It's <span class="text-indigo-600 dark:text-indigo-400">Prosper</span>
+      </h1>
+      <h3 class="text-lg sm:text-xl text-gray-600 dark:text-gray-300">
+        I'm a <span class="font-medium text-indigo-500 dark:text-indigo-300 typing-text"></span>
+      </h3>
+      <p class="text-gray-700 text-sm sm:text-base">
+        Prosper is a passionate and creative web designer known for crafting visually
+        stunning and user-friendly websites. With a keen eye for design and a deep
+        understanding of modern web development, I transform ideas into beautiful,
+        functional digital experiences.
+      </p>
+
+        <div class="flex gap-2 items-center justify-center">
+            <a href=""><i class="text-2xl text-indigo-400 fa-brands fa-facebook"></i></a>
+        <a href=""><i class="text-2xl text-orange-300 fa-brands fa-instagram"></i></a>
+        <a href=""><i class="text-2xl text-blue-500 fa-brands fa-linkedin-in"></i></a>
+        <a href=""><i class="text-2xl text-indigo-400 fa-brands fa-twitter"></i></a>
+        <a href=""><i class="text-2xl fa-brands fa-github"></i></a>
+        </div>
+
+      <!-- Hire Me Button -->
+      <a href="hireme.html" class="inline-block px-6 py-2 bg-indigo-600 text-white rounded-lg shadow
+       hover:bg-indigo-700 transition mt-4">
+        Hire Me
+      </a>
+    </div>
+
+    <!-- Profile Image -->
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img src="./images/ppassport.png" alt="Prosper's profile picture" class="w-48 sm:w-64 md:w-72 rounded-full shadow-lg" />
+    </div>
+  </section>
+
+  <!-- Typing Effect Script -->
+  <script>
+    const roles = ["Web Developer", "UI/UX Designer", "Creative Thinker"];
+    const typingSpan = document.querySelector(".typing-text");
+    let index = 0, charIndex = 0, isDeleting = false;
+
+    function type() {
+      const currentRole = roles[index];
+      typingSpan.textContent = currentRole.substring(0, charIndex);
+
+      if (!isDeleting && charIndex < currentRole.length) {
+        charIndex++;
+        setTimeout(type, 150);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(type, 100);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) index = (index + 1) % roles.length;
+        setTimeout(type, 1000);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+  
+            <!--footer section starts-->
+            <div class="border bg-gray-200 shadow-5xl py-8 px-10
+            flex items-center justify-center">
+            <p>Copyright@chukwuprosper.All rights reserved</p>
+            </div>
+
+            <!--footer section starts-->
+
+
+  </body>
+</html>

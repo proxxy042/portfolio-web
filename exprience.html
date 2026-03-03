@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exeprience</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="Fontawesome/css/all.css">
+</head>
+<body>
+     <!-- Responsive Navigation -->
+<div class="flex justify-between items-center py-6 px-4 bg-gray-200">
+                    <!-- Logo / Site Name -->
+         <a href="#" class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">Prosper</a>
+         <nav class="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+                    <!-- Nav container -->
+    <div id="navContainer" class="relative flex flex-col sm:flex-row">
+                    <!-- Links -->
+      <a href="prosperprofile.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Home</a>
+      <a href="about me.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">About Me</a>
+      <a href="exprience.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Experience</a>
+      <a href="education.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Education</a>
+      <a href="Contact.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Contact</a>
+
+                    <!-- Sliding highlight bar (desktop only) -->
+      <div id="highlight" class="hidden sm:block absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-indigo-600 to-indigo-400 
+      rounded-lg transition-all duration-300 ease-in-out z-0"></div>
+    </div>
+  </nav>
+</div>
+          <!--javascript functions-->
+          <script>
+  const links = document.querySelectorAll(".nav-link");
+  const highlight = document.getElementById("highlight");
+
+  links.forEach((link, index) => {
+    link.addEventListener("mouseenter", () => {
+      if (window.innerWidth >= 640) { // Tailwind 'sm' breakpoint
+        highlight.classList.remove("hidden");
+        highlight.style.left = `${index * 20}%`;
+      }
+    });
+  });
+
+  document.getElementById("navContainer").addEventListener("mouseleave", () => {
+    if (window.innerWidth >= 640) {
+      highlight.classList.add("hidden");
+    }
+  });
+</script> 
+              <!--nav bar end-->
+
+            <!-- Work Experience Section -->
+<section class="min-h-screen bg-gray-50 shadow-2xl grid gap-8 p-6">
+
+  
+  <!-- Job 1 -->
+  <div class="text-xl bg-white/30 p-4 rounded-xl shadow">
+    <h1 class="font-bold mb-2">✅ General Supervisor and IT manager</h1>
+    <p>OAS-Lounge and Restaurant</p>
+    <p>Citec Estate, Mbora, FCT</p>
+    <p>2024 - Current</p>
+    <p>Enhance customer satisfaction through efficient resolution of concerns</p>
+    <p>Collaborate with other departments to ensure seamless communication and smooth workflow across team</p>
+    <p>Oversee sales records, sales data entry, and other record keeping</p>
+    <p>Manage and maintain the company computer system</p>
+  </div>
+
+  <!-- Job 2 -->
+  <div class="text-xl bg-white/30 p-4 rounded-xl shadow">
+    <h1 class="font-bold mb-2">✅ F & B Manager's and Storekeeper</h1>
+    <p>Pave Hotel and Suites</p>
+    <p>Ahmadu Bello Way, Kado, FCT</p>
+    <p>2021 - 2023</p>
+    <p>Prepare detailed reports for senior management, highlighting sales performance and opportunities for improvement</p>
+  </div>
+
+        <!-- Job 3 -->
+  <div class="text-xl bg-white/30 p-4 rounded-xl shadow">
+    <h1 class="font-bold mb-2">✅ Facility Manager</h1>
+    <p>My Project Group</p>
+    <p>No. 1 Goba Close, Wuse 2, FCT</p>
+    <p>2018 - 2020</p>
+    <p>Enhance safety standards by conducting regular facility inspections and addressing potential hazards promptly</p>
+    <p>Evaluated facility operations and personnel for safety and health regulation compliance</p>
+  </div>
+
+        <!-- Job 4-->
+    <div class="text-xl bg-white/30 p-4 rounded-xl shadow">
+      <h1 class="font-bold mb-2">✅ Genral Supervisor</h1>
+      <p>All Point Suite</p>
+      <p>A. E. Ekukinam Street, Gouba Plaza Utako, FCT</p>
+      <p>2016 - 2018</p>
+      <p>Enhance Team Performance</p>
+      <p>Lead and support staff</p>
+      <p>Prepare detailed reports for senior Management</p>
+    </div>
+
+
+</section>
+             <!--footer section starts-->
+            <div class="border bg-gray-200 shadow-5xl py-8 px-10
+            flex items-center justify-center">
+            <p>Copyright@chukwuprosper.All rights reserved</p>
+            </div>
+
+            <!--footer section starts-->
+    
+</body>
+</html>

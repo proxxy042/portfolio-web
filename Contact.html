@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="Fontawesome/css/all.css">
+</head>
+<body>
+          <!-- Responsive Navigation -->
+<div class="flex justify-between items-center py-6 px-4 bg-gray-200">
+                    <!-- Logo / Site Name -->
+         <a href="#" class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">Prosper</a>
+         <nav class="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+                    <!-- Nav container -->
+    <div id="navContainer" class="relative flex flex-col sm:flex-row">
+                    <!-- Links -->
+      <a href="prosperprofile.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Home</a>
+      <a href="about me.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">About Me</a>
+      <a href="exprience.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Experience</a>
+      <a href="education.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Education</a>
+      <a href="Contact.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Contact</a>
+
+                    <!-- Sliding highlight bar (desktop only) -->
+      <div id="highlight" class="hidden sm:block absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-indigo-600 to-indigo-400 
+      rounded-lg transition-all duration-300 ease-in-out z-0"></div>
+    </div>
+  </nav>
+</div>
+          <!--javascript functions-->
+          <script>
+  const links = document.querySelectorAll(".nav-link");
+  const highlight = document.getElementById("highlight");
+
+  links.forEach((link, index) => {
+    link.addEventListener("mouseenter", () => {
+      if (window.innerWidth >= 640) { // Tailwind 'sm' breakpoint
+        highlight.classList.remove("hidden");
+        highlight.style.left = `${index * 20}%`;
+      }
+    });
+  });
+
+  document.getElementById("navContainer").addEventListener("mouseleave", () => {
+    if (window.innerWidth >= 640) {
+      highlight.classList.add("hidden");
+    }
+  });
+</script> 
+              <!--nav bar end-->
+           <!-- Contact Info Section -->
+<section class="min-h-screen bg-gray-50 shadow-2xl p-6 flex flex-col gap-6">
+
+  <!-- Full Name -->
+  <div>
+    <h2 class="text-2xl font-bold">Full Name:</h2>
+    <p class="text-xl">Chukwu Prosper Arinze</p>
+  </div>
+
+  <!-- Email Address -->
+  <div>
+    <h2 class="text-2xl font-bold">Email Address:</h2>
+    <p class="text-xl">chukwuprosper042@gmail.com</p>
+  </div>
+
+  <!-- Phone Numbers -->
+  <div>
+    <h2 class="text-2xl font-bold">Phone Number:</h2>
+    <p class="text-xl">+234 812 274 1447</p>
+    <p class="text-xl">+234 815 510 6414</p>
+  </div>
+
+  <!-- Residential Address -->
+  <div>
+    <h2 class="text-2xl font-bold">Residential Address:</h2>
+    <p class="text-xl">
+      Cadestral Zone, Kubwa District, <br />
+      Close to Railway, FCT
+    </p>
+  </div>
+
+  <div class="bg-white/30 p-4 py-4 rounded-xl shadow flex gap-2">
+     <a href=""><i class="text-2xl text-indigo-400 fa-brands fa-facebook"></i></a>
+      <a href=""></a><i class="text-2xl text-orange-300 fa-brands fa-instagram"></i></a>
+      <a href=""></a><i class="text-2xl text-blue-500 fa-brands fa-linkedin-in"></i></a>
+      <a href=""></a><i class="text-2xl text-indigo-400 fa-brands fa-twitter"></i></a>
+      <a href=""></a><i class="text-2xl fa-brands fa-github"></i></a>
+  </div>
+</section>
+            <!--footer section starts-->
+            <div class="border bg-gray-200 shadow-5xl py-8 px-10
+            flex items-center justify-center">
+           <p>Copyright@chukwuprosper.All rights reserved</p>
+            </div>
+
+            <!--footer section starts-->
+
+
+    
+</body>
+</html>

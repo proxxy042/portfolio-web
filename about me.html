@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="Fontawesome/css/all.css">
+</head>
+<body>
+    
+    <!-- Responsive Navigation -->
+<div class="flex justify-between items-center py-6 px-4 bg-gray-200">
+                    <!-- Logo / Site Name -->
+         <a href="#" class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">Prosper</a>
+         <nav class="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+                    <!-- Nav container -->
+    <div id="navContainer" class="relative flex flex-col sm:flex-row">
+                    <!-- Links -->
+      <a href="prosperprofile.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Home</a>
+      <a href="about me.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">About Me</a>
+      <a href="exprience.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Experience</a>
+      <a href="education.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Education</a>
+      <a href="Contact.html" class="nav-link text-center text-red-800 font-semibold text-base py-3 sm:flex-1 relative z-10">Contact</a>
+
+                    <!-- Sliding highlight bar (desktop only) -->
+      <div id="highlight" class="hidden sm:block absolute top-0 left-0 h-full w-1/5 bg-gradient-to-r from-indigo-600 to-indigo-400 
+      rounded-lg transition-all duration-300 ease-in-out z-0"></div>
+    </div>
+  </nav>
+</div>
+          <!--javascript functions-->
+          <script>
+  const links = document.querySelectorAll(".nav-link");
+  const highlight = document.getElementById("highlight");
+
+  links.forEach((link, index) => {
+    link.addEventListener("mouseenter", () => {
+      if (window.innerWidth >= 640) { // Tailwind 'sm' breakpoint
+        highlight.classList.remove("hidden");
+        highlight.style.left = `${index * 20}%`;
+      }
+    });
+  });
+
+  document.getElementById("navContainer").addEventListener("mouseleave", () => {
+    if (window.innerWidth >= 640) {
+      highlight.classList.add("hidden");
+    }
+  });
+</script> 
+              <!--nav bar end-->
+
+                       <!-- About & Education Section -->
+<section class="min-h-screen bg-gray-50 shadow-2xl grid grid-cols-1 gap-8 p-6">
+
+  <!-- About Me -->
+  <div class="text-xl bg-white/30 p-6 rounded-xl shadow">
+    <p>
+      I'm a passionate and results-driven professional with a strong background in information technology and business management, including website design and hospitality business management. Known for blending creativity with strategic thinking to deliver impactful solutions.
+    </p>
+    <p class="mt-4">
+      With over 2 years of experience in web development and 5 years in hospitality business management, I thrive in dynamic environments where innovation, collaboration, and continuous learning are valued.
+    </p>
+    <p class="mt-4">
+      I specialize in website design masterclasses (HTML, CSS, Tailwind CSS, JavaScript), as well as hospitality management (food & beverage, administration, store management). I'm committed to turning ideas into meaningful outcomes — whether working independently or on a team.
+    </p>
+    <p class="mt-4">
+      I take pride in my adaptability, problem-solving, and exceeding expectations. Outside of work, I'm an avid reader, lifelong learner, and travel enthusiast, always seeking new perspectives for both personal and professional growth.
+    </p>
+  </div>
+
+              <!--footer section starts-->
+            <div class="border bg-gray-200 shadow-5xl py-8 px-10
+            flex items-center justify-center">
+            <p>Copyright@chukwuprosper.All rights reserved</p>
+            </div>
+            <!--footer section starts-->
+</body>
+</html>
